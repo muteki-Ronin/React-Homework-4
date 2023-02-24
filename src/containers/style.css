@@ -1,0 +1,53 @@
+button {
+  min-width: 100px;
+  min-height: 40px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  box-shadow: #FC0 1px 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  gap: 20px;
+}
+
+.header-container {
+  margin-top: 20px;
+}
+
+.header-title {
+  font-size: 4rem;
+  color: rgba(244, 235, 169, 0.841);
+  text-shadow: rgb(224, 224, 224) 1px 0 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-panel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.btn {
+  color: rgba(129, 95, 7, 0.926);
+}
+
+.btn-active {
+  color: rgba(222, 28, 28, 0.942);
+}

@@ -1,55 +1,40 @@
 // CORE
 import { Component } from "react";
 // COMPONENTS
-// import { Item } from "../item/Item";
-
+import { Item } from "../item/Item";
 // STYLES
+import "./style.css";
 
 export class ListItems extends Component {
   constructor() {
     super();
     this.state = {
       item: null,
+      itemType: null,
     };
   }
 
-  requestPeople = (num) => {
-    fetch(`https://swapi.dev/api/people/${num}`)
-      .then((response) => response.json())
-      .then((data) => this.setState({ item: data }));
-  };
-
-  requestPlanet = (num) => {
-    fetch(`https://swapi.dev/api/planet/${num}`)
-      .then((response) => response.json())
-      .then((data) => this.setState({ item: data }));
-  };
-
-  requestStarship = (num) => {
-    fetch(`https://swapi.dev/api/starship/${num}`)
-      .then((response) => response.json())
-      .then((data) => this.setState({ item: data }));
-  };
-
   handleClick = (index) => {
     this.setState({
-      item: this.props.items[index],
+      item: this.props.state.items[index],
+      itemType: this.props.state.itemType,
     });
-    console.log(this.state.item);
   };
 
   render() {
-    const { items } = this.props;
+    const { state } = this.props;
     return (
       <>
-        <ul>
-          {items.map((item, index) => (
-            <li key={item.name} onClick={() => this.handleClick(index + 1)}>
+        <ul className="list-container">
+          {state.items.map((item, index) => (
+            <li className="list-item" key={item.name} onClick={() => this.handleClick(index)}>
               {item.name}
             </li>
           ))}
         </ul>
-        {/* <Item item={item} /> */}
+        {this.state.item && (
+          <Item item={this.state.item} itemType={this.state.itemType} />
+        )}
       </>
     );
   }
