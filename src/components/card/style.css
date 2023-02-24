@@ -8,8 +8,9 @@
   min-width: 400px;
   min-height: 150px;
   gap: 10px;
-  color: rgb(25, 17, 4);
+  color: rgb(247, 247, 247);
   text-shadow: rgb(224, 224, 224) 1px 0 10px;
+  font-weight: bold;
 }
 
 h3 {

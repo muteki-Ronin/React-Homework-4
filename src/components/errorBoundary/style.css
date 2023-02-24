@@ -1,0 +1,26 @@
+h1 {
+  font-size: 5rem;
+  color: red;
+}
+
+h2 {
+  font-size: 4rem;
+  color: red;
+}
+
+button {
+  min-width: 100px;
+  min-height: 40px;
+  color: red;
+}
+
+button:hover {
+  box-shadow: rgb(228, 0, 0) 1px 0 10px;
+}
+
+.errorBoundary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}

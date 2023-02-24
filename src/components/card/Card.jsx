@@ -3,7 +3,7 @@ import { Component } from "react";
 // STYLES
 import "./style.css";
 
-export class Item extends Component {
+export class Card extends Component {
   render() {
     const { item, itemType } = this.props;
     return (

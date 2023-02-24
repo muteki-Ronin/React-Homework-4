@@ -1,3 +1,4 @@
+// CORE
 import RingLoader from "react-spinners/RingLoader";
 
 export function Loader() {

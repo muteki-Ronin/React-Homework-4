@@ -1,6 +1,7 @@
 // CORE
-
 import { Component } from "react";
+// STYLES
+import "./style.css";
 
 export class ErrorBoundary extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ export class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div>
+        <div className="errorBoundary-container">
           <h2>Oops!</h2>
           <h1>ERROR!!!</h1>
           <button onClick={this.reloadApplication}>RELOAD</button>
